@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>Yahya</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <script src="https://kit.fontawesome.com/154a26b049.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="{% static 'js/home.js' %}"></script>
+        <!-- SMOOTH SCROLL -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            $(function() {
+              $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                  if (target.length) {
+                    $('html,body').animate({
+                      scrollTop: target.offset().top
+                    }, 800);
+                    return false;
+                  }
+                }
+              });
+            });
+            function reveal() {
+                var reveals = document.querySelectorAll(".reveal");
+              
+                for (var i = 0; i < reveals.length; i++) {
+                  var windowHeight = window.innerHeight;
+                  var elementTop = reveals[i].getBoundingClientRect().top;
+                  var elementVisible = 150;
+              
+                  if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                  } else {
+                    reveals[i].classList.remove("active");
+                  }
+                }
+              }
+              
+              window.addEventListener("scroll", reveal);
+            </script>
+    </head>
+    <body>
+        <div class="nav">
+            <h1 class="name">Yahya.</h1>
+            <!--toggle menu-->
+            <input id="menu__toggle" type="checkbox" />
+            <nav class="nav-main main-nav">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About me</a>
+                <a href="#list-portfolio" class="nav-link">Portfolio</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#footer" class="nav-link-2 main-nav">Let's talk</a>
+            </nav>
+        
+            <label class="menu__btn" for="menu__toggle">
+            <span></span>
+            </label>
+        
+        </div>
+        <main>
+            <div class="profil-home">
+                <h2 class="profil-quote">I'm <b class="clr">Yahya</b>. 
+                    Computer science student who manages to survive this far.</h2>
+                <img class="yahyol" src="{% static 'image/anak_sukses_fix.png'  %}">
+            </div>
+            <section class="about" id="about">
+                <div class="reveal">
+                <h1 class="about-title">About me</h1>
+                <div class="about-desc">
+                    <img class="about-pic" src="{% static 'image/yahya_hi.jpeg' %}">
+                    <div class="about-script">
+                    <h1 class="typewrite-main">
+                        <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Mochammad Agus Yahya.", "I am an INFJ", "Welcome to my website!" ]'>
+                            <span class="wrap"></span>
+                        </a>
+                    </h1>
+                    <h4><b class="degree">Computer Science,</b> Universitas Indonesia</h4>
+                    <h3 class="main-quote">“<b class="about-quote">Choose to be optimistic. It feels better.</b>”</h3>
+                    <p class="about-story">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Quasi sed ab laborum nostrum dolores eius, assumenda consectetur
+                         laboriosam nobis facilis quibusdam nemo, molestiae, velit maiores
+                          quidem neque ea. Sint, hic! Quaerat aliquid, quasi reiciendis, 
+                          consequuntur consequatur tempora fugiat eos sapiente dolorem illum, 
+                          ab voluptatum nemo dolor mollitia dolores harum ut explicabo temporibus
+                           in commodi? Consequuntur vel adipisci impedit amet facere. Laudantium
+                            error praesentium laborum id fugit consequatur, quod sint cupiditate
+                            ! Officia libero optio omnis, ullam sapiente, saepe perspiciatis similique 
+                            exercitationem, fugiat vero ipsum deserunt. 
+                    </p>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="list-potfolio" id="list-portfolio">
+                <div class="reveal">
+                <center><h1 class="list-portfolio-title">Portfolio</h1></center>
+                <div class="portfolio reveal">
+                    <img class="portfolio-pic" src="{% static 'image/portfolio-1.png' %}">
+                    <div class="portfolio-spec">
+                    <h3 class="portfolio-title">Personal Website</h3>
+                    <div class="portofilo-desc">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                            Quasi sed ab laborum nostrum dolores eius, assumenda consectetur
+                             laboriosam nobis facilis quibusdam nemo, molestiae, velit maiores
+                              quidem neque ea.</p>
+                    </div>
+                    <p>Tech Stack:</p>
+                    <div class="tech-stack">
+                        <img class="tool" src="{% static 'icon/python.png' %}">
+                        <img class="tool" src="{% static 'icon/html.png' %}">
+                        <img class="tool" src="{% static 'icon/css.png' %}">
+                        <img class="tool" src="{% static 'icon/js.png' %}">
+                        <img class="tool" src="{% static 'icon/postgresql.png' %}">
+                    </div>
+                    </div>
+                </div>
+                <div class="portfolio reveal">
+                    <img class="portfolio-pic" src="{% static 'image/portfolio-2.png' %}">
+                    <div class="portfolio-spec">
+                    <h3 class="portfolio-title">Project Channel</h3>
+                    <div class="portofilo-desc">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                            Quasi sed ab laborum nostrum dolores eius, assumenda consectetur
+                             laboriosam nobis facilis quibusdam nemo, molestiae, velit maiores
+                              quidem neque ea.</p>
+                    </div>
+                    <p>Tech Stack:</p>
+                    <div class="tech-stack">
+                        <img class="tool" src="{% static 'icon/python.png' %}">
+                        <img class="tool" src="{% static 'icon/html.png' %}">
+                        <img class="tool" src="{% static 'icon/css.png' %}">
+                        <img class="tool" src="{% static 'icon/js.png' %}">
+                    </div>
+                    </div>
+                </div>
+                <div class="portfolio reveal">
+                    <img class="portfolio-pic" src="{% static 'image/portfolio-3.png' %}">
+                    <div class="portfolio-spec">
+                    <h3 class="portfolio-title">UI Reader</h3>
+                    <div class="portofilo-desc">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                            Quasi sed ab laborum nostrum dolores eius, assumenda consectetur
+                             laboriosam nobis facilis quibusdam nemo, molestiae, velit maiores
+                              quidem neque ea.</p>
+                    </div>
+                    <p>Tech Stack:</p>
+                    <div class="tech-stack">
+                        <img class="tool" src="{% static 'icon/java.png' %}">
+                        <img class="tool" src="{% static 'icon/html.png' %}">
+                        <img class="tool" src="{% static 'icon/css.png' %}">
+                        <img class="tool" src="{% static 'icon/js.png' %}">
+                        <img class="tool" src="{% static 'icon/postgresql.png' %}">
+                    </div>
+                    </div>
+                </div>
+                <div class="portfolio reveal">
+                    <img class="portfolio-pic" src="{% static 'image/portfolio-4.png' %}">
+                    <div class="portfolio-spec">
+                    <h3 class="portfolio-title">The Cims</h3>
+                    <div class="portofilo-desc">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                            Quasi sed ab laborum nostrum dolores eius, assumenda consectetur
+                             laboriosam nobis facilis quibusdam nemo, molestiae, velit maiores
+                              quidem neque ea.</p>
+                    </div>
+                    <p>Tech Stack:</p>
+                    <div class="tech-stack">
+                        <img class="tool" src="{% static 'icon/python.png' %}">
+                        <img class="tool" src="{% static 'icon/html.png' %}">
+                        <img class="tool" src="{% static 'icon/css.png' %}">
+                        <img class="tool" src="{% static 'icon/js.png' %}">
+                        <img class="tool" src="{% static 'icon/postgresql.png' %}">
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="experience" id="experience">
+                <div class="reveal">
+                <h2 class="exp-title">Experience</h2>
+                <div class="exp-container">
+                    <div class="exp-item exp-1">
+                        <img class="exp-img" src="{% static 'image/ceds.jpeg' %}">
+                        <p class="exp-name">Creative Media, CEDS UI</p>
+                    </div>
+                    <div class="exp-item exp-2">
+                        <img class="exp-img" src="{% static 'image/gelora_fixx.jpeg' %}">
+                        <p class="exp-name">Creative Media, Gelora Wirausaha</p>
+                    </div>
+                    <div class="exp-item exp-3">
+                        <img class="exp-img" src="{% static 'image/ddp0_fix.jpeg' %}">
+                        <p class="exp-name">Mentor, DDP0</p>
+                    </div>
+                    <div class="exp-item exp-4">
+                        <img class="exp-img" src="{% static 'image/tetris.png' %}">
+                        <p class="exp-name">Mentee, Tetris II : Data Analyst</p>
+                    </div>
+                </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer">
+            <div class="social-media">
+                <a href="https://github.com/agusyahya23"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://www.instagram.com/yahyagolds23/"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://twitter.com/yahyagolds23_"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://line.me/ti/p/yahyagolds23"><i class="fab fa-line fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/mochammad-agus-yahya-038a801b6/"><i class="fab fa-linkedin fa-2x"></i></a>
+                <p class="email"><i class="fa fa-envelope"></i>  mochammadagusyahya@gmail.com</p>
+            </div>
+            <div class="copy-right">
+                <p class="copyright">
+                    © 2022 Created by yahyagolds23_
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
