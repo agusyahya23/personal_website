@@ -605,6 +605,7 @@ i:hover {
     .profil-quote {
         width: 80%;
         font-size: 14px;
+        left:10%;
     }
 }
 @media (max-width:600px)  { 
