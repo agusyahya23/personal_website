@@ -2,7 +2,8 @@
 {% load static %}
 <html>
     <head>
-        <title>Yahya</title>
+        <title>Yahya | Personal Website</title>
+        <link class="icon-title" rel="shortcut icon" href="{% static 'image/icon-yahya.jpeg' %}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
         <script src="https://kit.fontawesome.com/154a26b049.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="{% static 'css/home.css' %}">
@@ -50,9 +51,9 @@
             <!--toggle menu-->
             <input id="menu__toggle" type="checkbox" />
             <nav class="nav-main main-nav">
-                <a href="#" class="nav-link">Home</a>
+                <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About me</a>
-                <a href="#list-portfolio" class="nav-link">Portfolio</a>
+                <a href="#list-portfolio" class="nav-link">Project</a>
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#footer" class="nav-link-2 main-nav">Let's talk</a>
             </nav>
@@ -63,9 +64,9 @@
         
         </div>
         <main>
-            <div class="profil-home">
+            <div class="profil-home" id="home">
                 <h2 class="profil-quote">I'm <b class="clr">Yahya</b>. 
-                    Computer science student who manages to survive this far.</h2>
+                    <span class="comp">Computer</span> <span class="sci">science</span> student who manages to survive this far.</h2>
                 <img class="yahyol" src="{% static 'image/anak_sukses_fix.png'  %}">
             </div>
             <section class="about" id="about">
@@ -75,22 +76,19 @@
                     <img class="about-pic" src="{% static 'image/yahya_hi.jpeg' %}">
                     <div class="about-script">
                     <h1 class="typewrite-main">
-                        <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Mochammad Agus Yahya.", "I am an INFJ", "Welcome to my website!" ]'>
+                        <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, i am Mochammad Agus Yahya.", "I am an INFJ", "Welcome to my website!" ]'>
                             <span class="wrap"></span>
                         </a>
                     </h1>
-                    <h4><b class="degree">Computer Science,</b> Universitas Indonesia</h4>
+                    <h4><span class="comp">Computer</span> <span class="sci">Science</span>, Universitas Indonesia</h4>
                     <h3 class="main-quote">“<b class="about-quote">Choose to be optimistic. It feels better.</b>”</h3>
-                    <p class="about-story">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                        Quasi sed ab laborum nostrum dolores eius, assumenda consectetur
-                         laboriosam nobis facilis quibusdam nemo, molestiae, velit maiores
-                          quidem neque ea. Sint, hic! Quaerat aliquid, quasi reiciendis, 
-                          consequuntur consequatur tempora fugiat eos sapiente dolorem illum, 
-                          ab voluptatum nemo dolor mollitia dolores harum ut explicabo temporibus
-                           in commodi? Consequuntur vel adipisci impedit amet facere. Laudantium
-                            error praesentium laborum id fugit consequatur, quod sint cupiditate
-                            ! Officia libero optio omnis, ullam sapiente, saepe perspiciatis similique 
-                            exercitationem, fugiat vero ipsum deserunt. 
+                    <p class="about-story">Currently, I’m studying computer science at Universitas Indonesia. 
+                        I’m experienced in developing website applications with frameworks such as Django and Springboot. 
+                        But, I intend to focus more on learning Javascript Frameworks and libraries.
+                        I also have a huge interest in Data Science & Data Analytics 
+                        and start thinking about creating some projects in those fields.
+                        <br><br>
+                        Wish me well on my journey.
                     </p>
                     </div>
                 </div>
@@ -98,16 +96,16 @@
             </section>
             <section class="list-potfolio" id="list-portfolio">
                 <div class="reveal">
-                <center><h1 class="list-portfolio-title">Portfolio</h1></center>
+                <center><h1 class="list-portfolio-title">Project</h1></center>
                 <div class="portfolio reveal">
+                    <a class="project-img" href="#home">
                     <img class="portfolio-pic" src="{% static 'image/portfolio-1.png' %}">
+                    </a>
                     <div class="portfolio-spec">
                     <h3 class="portfolio-title">Personal Website</h3>
                     <div class="portofilo-desc">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Quasi sed ab laborum nostrum dolores eius, assumenda consectetur
-                             laboriosam nobis facilis quibusdam nemo, molestiae, velit maiores
-                              quidem neque ea.</p>
+                        <p>My first personal website for showing my projects and experiences. 
+                            I developed this using Django as a backend.</p>
                     </div>
                     <p>Tech Stack:</p>
                     <div class="tech-stack">
@@ -120,14 +118,14 @@
                     </div>
                 </div>
                 <div class="portfolio reveal">
+                    <a class="project-img" href="https://project-channel.herokuapp.com/" target="_blank">
                     <img class="portfolio-pic" src="{% static 'image/portfolio-2.png' %}">
+                    </a>
                     <div class="portfolio-spec">
                     <h3 class="portfolio-title">Project Channel</h3>
                     <div class="portofilo-desc">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Quasi sed ab laborum nostrum dolores eius, assumenda consectetur
-                             laboriosam nobis facilis quibusdam nemo, molestiae, velit maiores
-                              quidem neque ea.</p>
+                        <p>Website and mobile app to find and create projects for everyone.
+                            Responsible for creating and displaying the profile of the user with the additional feature of updating the profile. </p>
                     </div>
                     <p>Tech Stack:</p>
                     <div class="tech-stack">
@@ -139,14 +137,15 @@
                     </div>
                 </div>
                 <div class="portfolio reveal">
+                    <a class="project-img" href="https://ui-reader.herokuapp.com/" target="_blank">
                     <img class="portfolio-pic" src="{% static 'image/portfolio-3.png' %}">
+                    </a>
                     <div class="portfolio-spec">
                     <h3 class="portfolio-title">UI Reader</h3>
                     <div class="portofilo-desc">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Quasi sed ab laborum nostrum dolores eius, assumenda consectetur
-                             laboriosam nobis facilis quibusdam nemo, molestiae, velit maiores
-                              quidem neque ea.</p>
+                        <p>An aggregator website that displays news.
+                            Responsible for creating the homepage, authentication, and developing the search feature. 
+                           </p>
                     </div>
                     <p>Tech Stack:</p>
                     <div class="tech-stack">
@@ -159,14 +158,13 @@
                     </div>
                 </div>
                 <div class="portfolio reveal">
+                    <a class="project-img" href="https://thecims.herokuapp.com/" target="_blank">
                     <img class="portfolio-pic" src="{% static 'image/portfolio-4.png' %}">
+                    </a>
                     <div class="portfolio-spec">
                     <h3 class="portfolio-title">The Cims</h3>
                     <div class="portofilo-desc">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Quasi sed ab laborum nostrum dolores eius, assumenda consectetur
-                             laboriosam nobis facilis quibusdam nemo, molestiae, velit maiores
-                              quidem neque ea.</p>
+                        <p>The final project for a database course that implements CRUD operation by combining PostgreSQL and Django.</p>
                     </div>
                     <p>Tech Stack:</p>
                     <div class="tech-stack">

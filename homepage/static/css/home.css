@@ -6,6 +6,9 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
+.icon-title {
+    border-radius: 50%;
+}
 .nav {
     display: flex;
     justify-content:space-between;
@@ -95,10 +98,13 @@ body {
 .about {
     margin-top: 50px;
     background-color: gold;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(254, 224, 50,1));
     padding : 30px;
     width: 100%;
     min-height: 100%;
     box-sizing: border-box;
+    margin-bottom: 0;
+    margin: 0;
 }
 .about-title {
     text-align: center;
@@ -129,11 +135,14 @@ body {
 }
 h4 {
     color: brown;
-    font-family: 'Roboto', sans-serif;
     margin: 0;
+    font-size: 20px;
 }
-.degree {
-    color: white;
+.comp {
+    color: blue;
+}
+.sci {
+    color : red;
 }
 h5 {
     color: white;
@@ -141,11 +150,13 @@ h5 {
 }
 .about-quote {
     color: brown;
+    font-style: italic;
 }
 .about-script {
     width: 40%;
     text-align: justify;
     margin-right: 100px;
+    font-weight: bold;
 }
 .about-pic {
     width : 400px;
@@ -154,19 +165,23 @@ h5 {
     display: block;
     margin: auto;
 }
-.list-portfolio {
-    padding : 30px;
-    width: 100%;
-    min-height: 100%;
-    margin-top: 50px;
+#list-portfolio {
+    background-color: white;
+    margin: 0;
+    margin-top: 0;
+    padding-bottom: 80px;
 }
+
 .list-portfolio-title {
     padding-top: 70px;
     font-size: 28px;
     font-weight: bold;
+    color: rgb(77, 75, 75)
+    margin: 0;
 }
 .portfolio-title {
     margin: 0;
+    color: brown;
 }
 .portfolio {
     display: flex;
@@ -178,19 +193,32 @@ h5 {
     margin-top: 40px;
     box-shadow: 0px 0px 20px #ccc;
     background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(254, 224, 50,1));
+    height: 50vh;
+}
+.project-img {
+    width: 50%;
+    display: block;
+    margin: auto;
 }
 .portfolio-pic{
-    width: 35%;
-    height : 100%;
+    width: 100%;
     display: block;
     margin: auto;
     border-radius: 10px;
+}
+.portfolio-pic:hover {
+    width: 80%;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
 }
 .portfolio-spec {
     width: 40%;
     display: block;
     margin: auto;
     text-align : justify;
+}
+p {
+    font-weight: bolder;
 }
 .tech-stack {
     display: flex;
@@ -206,13 +234,13 @@ h5 {
 .experience {
     text-align: center;
     background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(254, 224, 50,1));
-    margin-top: 80px;
-    border-top-right-radius: 10%;
+    margin: 0;
 }
 .exp-title {
     padding-top: 80px;
     padding-bottom: 30px;
     color: white;
+    margin: 0;
 }
 .exp-container {
     display: grid;
@@ -247,6 +275,11 @@ h5 {
     width : 100%;
     height : 30vh;
     border-radius: 30px;
+}
+.exp-img:hover {
+    box-shadow: 0px 0px 20px white;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
 }
 .exp-name {
     font-weight: bold;
@@ -417,6 +450,7 @@ i:hover {
         width: 100%;
         min-height: 100%;
         border-radius: 0;
+        margin: 0;
     }
     .about-title {
         text-align: center;
@@ -446,7 +480,6 @@ i:hover {
     }
     h4 {
         color: brown;
-        font-family: 'Roboto', sans-serif;
         margin: 0;
     }
     .degree {
@@ -502,10 +535,15 @@ i:hover {
         margin-bottom : 40px;
         box-shadow: 0px 0px 20px #ccc;
         background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(254, 224, 50,1));
+        height: auto;
+    }
+    .project-img {
+        width: 80%;
+        display: block;
+        margin: auto;
     }
     .portfolio-pic{
-        width: 80%;
-        height : 100%;
+        width: 100%;
         display: block;
         margin: auto;
         border-radius: 10px;
@@ -531,6 +569,7 @@ i:hover {
         background-color: gold;
         margin-top: 80px;
         border-radius: 0;
+        margin: 0;
     }
     .exp-title {
         padding-top: 80px;
@@ -564,6 +603,7 @@ i:hover {
 @media (max-width:480px)  {
     /* smartphones, Android phones, landscape iPhone */ 
     .profil-quote {
+        width: 70%;
         font-size: 14px;
     }
 }
