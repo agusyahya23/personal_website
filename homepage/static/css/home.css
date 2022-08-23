@@ -612,6 +612,7 @@ i:hover {
     /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
     .profil-quote {
         font-size: 14px;
+        width: 80%;
     }
 }
 @media (max-width:700px)  { 
