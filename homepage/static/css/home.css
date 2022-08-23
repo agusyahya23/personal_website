@@ -622,6 +622,7 @@ i:hover {
     }
     .profil-quote {
         font-size: 14px;
+        width: 80%;
     }
     .tool {
         width: 25px;
@@ -632,6 +633,7 @@ i:hover {
     /* tablet, landscape iPad, lo-res laptops ands desktops */ 
     .profil-quote {
         font-size: 18px;
+        width: 80%;
     }
     .tool {
         width: 30px;
