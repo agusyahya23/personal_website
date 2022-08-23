@@ -603,7 +603,7 @@ i:hover {
 @media (max-width:480px)  {
     /* smartphones, Android phones, landscape iPhone */ 
     .profil-quote {
-        width: 70%;
+        width: 80%;
         font-size: 14px;
     }
 }
